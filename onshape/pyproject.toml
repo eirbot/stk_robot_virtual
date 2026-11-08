@@ -1,0 +1,19 @@
+[project]
+name = "onshape-client"
+version = "0.1.0"
+description = "Onshape export"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "authlib>=1.9.1",
+    "fastapi[standard]>=0.162.0",
+    "itsdangerous>=2.2.0",
+    "onshape-to-robot>=1.8.3",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.fastapi]
+entrypoint = "onshape_client.main:app"
