@@ -12,3 +12,7 @@ serve:
 # Export the robot from the got user bearer token 
 export-robot:
     uv run onshape-to-robot stk_robot
+
+# Export the robot from the got user bearer token in SDF
+export-robot-sdf:
+    uv run onshape-to-robot stk_robot_sdf
