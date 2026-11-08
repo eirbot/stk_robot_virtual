@@ -8,3 +8,8 @@
 7. Fill in it in your .env
 8. Run the export command (TODO: document it)
 
+
+## Known Limits
+
+A `limit` field has been set in the SDF export config to manage an issue in
+`onshape-to-robot`'s handling of continuous DOFs.

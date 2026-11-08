@@ -1,0 +1,15 @@
+{
+    "url": "https://cad.onshape.com/documents/0284a40034354dbe74c82a48/w/530a4eb8c70b64be7473895d/e/9ea828e27e4986b8c57a3c58",
+    "package_name": "stk_robot_description",
+    "output_format": "sdf",
+    "joint_properties": {
+        "left_wheel": {
+            "type": "continuous",
+            "limits": [-100000, 100000]
+        },
+        "right_wheel": {
+            "type": "continuous",
+            "limits": [-100000, 100000]
+        }
+    }
+}

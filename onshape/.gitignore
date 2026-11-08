@@ -15,3 +15,5 @@ wheels/
 # onshape export
 stk_robot/*
 !stk_robot/config.json
+stk_robot_sdf/*
+!stk_robot_sdf/config.json
