@@ -18,3 +18,9 @@ Tech stack in the sub-project: `uv`
 See the `stk_robot_ws/` directory. It contains all the interesting stuff.
 
 Tech stack in the sub-project: `pixi`
+
+## Roadmap
+
+- [ ] Export in SDF without the error on the wheels (see [this
+      page](https://github.com/rhoban/onshape-to-robot-examples#field))
+- [ ] [Model the field](https://github.com/rhoban/onshape-to-robot-examples#field)
