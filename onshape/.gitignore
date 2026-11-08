@@ -11,3 +11,7 @@ wheels/
 
 # secrets
 .env
+
+# onshape export
+stk_robot/*
+!stk_robot/config.json
