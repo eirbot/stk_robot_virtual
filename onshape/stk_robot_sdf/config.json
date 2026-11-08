@@ -4,10 +4,12 @@
     "output_format": "sdf",
     "joint_properties": {
         "left_wheel": {
-            "type": "continuous"
+            "type": "continuous",
+            "limits": [-100000, 100000]
         },
         "right_wheel": {
-            "type": "continuous"
+            "type": "continuous",
+            "limits": [-100000, 100000]
         }
     }
 }
