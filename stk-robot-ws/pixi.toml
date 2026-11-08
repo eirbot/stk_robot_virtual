@@ -1,0 +1,51 @@
+[workspace]
+authors = ["Thomas H <thomas.horrut33@gmail.com>"]
+channels = ["https://prefix.dev/robostack-lyrical", "https://prefix.dev/conda-forge"]
+name = "ros_playground"
+platforms = [
+  "linux-64",
+  "win-64",
+  { platform = "osx-64", macos = "14.0" },
+  { platform = "osx-arm64", macos = "14.0" },
+  "linux-aarch64"
+]
+version = "0.1.0"
+preview = ["pixi-build"]
+
+[tasks]
+display = "ros2 launch stk_robot_description display.launch.py"
+
+[target.unix.tasks]
+build = "colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DPython_FIND_VIRTUALENV=ONLY -DPython3_FIND_VIRTUALENV=ONLY"
+
+[target.win.tasks]
+build = "colcon build --merge-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DPython_FIND_VIRTUALENV=ONLY -DPython3_FIND_VIRTUALENV=ONLY"
+
+# This will automatically activate the ros workspace on activation
+[target.win.activation]
+scripts = ["install/setup.bat"]
+
+[target.unix.activation]
+# For activation scripts, we use bash for Unix-like systems
+scripts = ["install/setup.bash"]
+
+[target.unix.activation.env]
+QT_QPA_PLATFORM="xcb"  # Gazebo does not work on Wayland
+
+[package.build.backend]
+channels = ["https://prefix.dev/conda-forge"]
+name = "pixi-build-ros"
+version = "*"
+
+[dependencies]
+ros-lyrical-desktop = "*"
+# To build our custom nodes
+ros-dev-tools = "*"
+# To build from source the packages
+ros-lyrical-ros2run = "*"
+# Nav2
+ros-lyrical-navigation2 = "*"
+ros-lyrical-nav2-bringup = "*"  # includes minimal tb3 and tb4
+ros-lyrical-joint-state-publisher-gui = "*"
+ros-lyrical-xacro = "*"
+ros-lyrical-sdformat-urdf = "*"
