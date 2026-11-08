@@ -1,7 +1,7 @@
 [workspace]
 authors = ["Thomas H <thomas.horrut33@gmail.com>"]
-channels = ["https://prefix.dev/robostack-lyrical", "https://prefix.dev/conda-forge"]
-name = "ros_playground"
+channels = ["https://prefix.dev/conda-forge", "https://prefix.dev/robostack-lyrical"]
+name = "stk-robot-ws"
 platforms = [
   "linux-64",
   "win-64",
